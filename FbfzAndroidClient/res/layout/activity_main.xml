@@ -1,0 +1,62 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+<TableRow
+    android:layout_weight="1"
+    android:background="@color/orange"
+    android:gravity="center_vertical">
+    <TextView 
+        android:id="@+id/tvStatus"
+        android:layout_column="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未登录"
+        android:textSize="18dp"
+        android:textColor="@color/lightcyan"
+        />
+    <Button 
+        android:layout_column="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btGotologin"
+        android:text="登陆"
+        android:textSize="18dp"
+        android:textColor="@color/lightcyan"
+        />
+    
+</TableRow>
+<TableRow android:layout_weight="15">
+     <ViewFlipper 
+         android:layout_span="5"
+         android:id="@+id/filper"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         >
+                 <ListView 
+                     android:layout_height="wrap_content"
+                     android:layout_width="fill_parent"
+                     android:id="@+id/lvShops"
+                     >
+                     
+                 </ListView>
+             
+   </ViewFlipper>
+</TableRow>
+<TableRow android:background="@color/orange" >
+    <GridView
+        android:id="@+id/gvMenu"
+        android:background="@color/orange"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_span="5"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp"
+        android:numColumns="4" 
+        android:layout_gravity="center"
+        >
+    </GridView>
+</TableRow>
+</TableLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="index" extends="struts-default">
+		<action name="systemIndex" class="com.softfz.action.system.IndexAction">
+			<result name="index" type="redirectAction">
+				<param name="actionName">indexCenter</param>
+				<param name="namespace">/admin</param>
+				<param name="method">index</param>
+			</result>
+			<result name="input">/login.jsp</result>
+		</action>
+	</package>
+	<package name="system" namespace="/admin" extends="systemcommon">
+		<action name="systemusermanager" class="com.softfz.action.system.SystemUserAction">
+			<result>/system/systemuser/systemuserlist.jsp</result>
+			<result name="jump">/system/systemuser/editSystemUser.jsp</result>
+		</action>
+		<action name="preparedsystemuser" class="com.softfz.action.system.SystemUserAction">
+			<result>/system/systemuser/addSystemUser.jsp</result>
+		</action>
+		<action name="usermembermanager" class="com.softfz.action.system.UserMemberAction">
+			<result>/system/member/memberQuery.jsp</result>
+		</action>
+		<action name="areamanager" class="com.softfz.action.system.AreaAction">
+			<result>/system/area/areaList.jsp</result>
+			<result name="allbig">/system/area/areaAdd.jsp</result>
+			<result name="jump">/system/area/areaEdit.jsp</result>
+		</action>
+		<action name="resourcesmanager" class="com.softfz.action.system.ResourcesAction">
+		</action>
+		<action name="indexCenter" class="com.softfz.action.system.IndexAction">
+			<result>/system/index.jsp</result>
+		</action>
+		<action name="typemanager" class="com.softfz.action.system.TypeManagerAction">
+			<result>/system/type/typeList.jsp</result>
+			<result name="allbig">/system/type/typeAdd.jsp</result>
+			<result name="jump">/system/type/typeEdit.jsp</result>
+		</action>
+		<action name="cooperationmanager" class="com.softfz.action.system.CooperationAction">
+			<result>/system/cooperation/cooperationQuery.jsp</result>
+			<result name="typeview" type="json">
+				<param name="root">types</param>
+				<param name="includeProperties">\[\d+\]\.typeid,\[\d+\]\.typename</param>
+			</result>
+			<result name="areaview" type="json">
+				<param name="root">areas</param>
+				<param name="includeProperties">\[\d+\]\.areaid,\[\d+\]\.areaname</param>
+			</result>
+			<result name="jumptoadd">/system/cooperation/cooperationAdd.jsp</result>
+		</action>
+		<action name="appraisemanager" class="com.softfz.action.system.AppraiseAction">
+			<result>/system/appraise/appQuery.jsp</result>
+		</action>
+	</package>
+	<package name="rolemanager" namespace="/role" extends="systemcommon">
+		<action name="rolemanager" class="com.softfz.action.system.RoleAction">
+			<result>/system/role/rolelist.jsp</result>
+		</action>
+		<action name="jumptoaddRole" class="com.softfz.action.system.RoleAction">
+			<result name="jump">/system/role/roleAdd.jsp</result>
+		</action>
+		<action name="jumptoupdateRole" class="com.softfz.action.system.RoleAction">
+			<result name="jumpupdate">/system/role/roleUpdate.jsp</result>
+		</action>
+	</package>
+	<package name="menumanager" namespace="/menu" extends="systemcommon">
+		<action name="menumanager" class="com.softfz.action.system.MenuAction">
+			<result>/system/menu/menuQuery.jsp</result>
+			<result name="jump">/system/menu/menuAdd.jsp</result>
+			<result name="jumptoUpdate">/system/menu/menuUpdate.jsp</result>
+		</action>
+	</package>
+	<package name="resourcesmanager" namespace="/resources"
+		extends="systemcommon">
+		<action name="resourcesmanager" class="com.softfz.action.system.ResourcesAction">
+			<result>/system/resources/resourcesQuery.jsp</result>
+			<result name="jumptoadd">/system/resources/resourcesAdd.jsp</result>
+			<result name="jumptoupdate">/system/resources/resourcesUpdate.jsp</result>
+		</action>
+	</package>
+</struts>    

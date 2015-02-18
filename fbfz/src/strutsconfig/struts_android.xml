@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="androidbase" extends="json-default">
+		<global-results>
+			<result name="androidclient" type="json">
+				<param name="root">message</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</global-results>
+	</package>
+	<package name="android" extends="androidbase">
+		<action name="adindex" class="com.softfz.action.android.IndexAction"></action>
+
+	</package>
+</struts>    

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*" >
+    <TableRow >
+        <ImageView 
+            android:id="@+id/ivShoppic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            />
+        <TextView 
+            android:id="@+id/tvShopinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_span="6"
+            />
+        <TextView 
+            android:id="@+id/tvShopGrade"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            />
+    </TableRow>
+    
+
+</TableLayout>

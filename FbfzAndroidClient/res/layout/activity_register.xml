@@ -1,0 +1,148 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+    <TableRow android:layout_weight="1" >
+        
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="用户名"
+            />
+        <EditText
+            android:layout_span="4"
+            android:id="@+id/etRgname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="密码"
+            />
+        <EditText
+            android:layout_span="4"
+            android:id="@+id/etRgpsw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="密码验证"
+            />
+        <EditText
+            android:layout_span="4"
+            android:id="@+id/etPswAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="性别"
+            />
+        <RadioGroup 
+            android:id="@+id/rgSex"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            >
+            <RadioButton 
+                android:id="@+id/rbMale"
+                android:checked="true"
+                android:text="男"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <RadioButton 
+                android:id="@+id/rbFemale"
+                android:text="女"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            
+        </RadioGroup>
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="邮箱"
+            />
+        <EditText
+            android:layout_span="4"
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="QQ"
+            />
+        <EditText
+            android:layout_span="4"
+            android:id="@+id/etQQ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+    </TableRow>
+    <TableRow >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="验证码"
+            />
+        <EditText 
+            android:id="@+id/etAuth_code"
+            android:layout_span="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </TableRow>
+    <TableLayout 
+        android:layout_span="5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        >
+        <TableRow >
+            <TextView />
+        <Button
+            android:id="@+id/btRegist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注册" 
+            />
+        <Button
+            android:id="@+id/btRgcancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消" 
+            />
+        <TextView />
+        </TableRow>
+    </TableLayout>
+    <TableRow android:layout_weight="2">
+        
+    </TableRow>
+</TableLayout>
